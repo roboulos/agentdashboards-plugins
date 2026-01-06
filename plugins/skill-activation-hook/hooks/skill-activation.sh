@@ -43,6 +43,16 @@ if echo "$prompt" | grep -qiE "(playwright|e2e|browser test|screenshot|browser a
     matched_skills="${matched_skills}playwright-testing\n"
 fi
 
+# Check skill-builder keywords
+if echo "$prompt" | grep -qiE "(create skill|new skill|build skill|add skill|skill template|showcase pattern|500-line rule|progressive disclosure)"; then
+    matched_skills="${matched_skills}skill-builder\n"
+fi
+
+# Check skill-developer keywords
+if echo "$prompt" | grep -qiE "(skill-rules\.json|skill rules|trigger patterns|hook mechanisms|UserPromptSubmit|PreToolUse|enforcement level|skill activation|YAML frontmatter)"; then
+    matched_skills="${matched_skills}skill-developer\n"
+fi
+
 # Output if matches found
 if [[ -n "$matched_skills" ]]; then
     echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"

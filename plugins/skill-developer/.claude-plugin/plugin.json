@@ -1,0 +1,9 @@
+{
+  "name": "skill-developer",
+  "version": "1.0.0",
+  "description": "Create and manage Claude Code skills following Anthropic best practices. Technical reference for skill system including YAML frontmatter, trigger types, enforcement levels, hook mechanisms, and the 500-line rule.",
+  "author": {
+    "name": "Snappy Consulting"
+  },
+  "keywords": ["skill", "skill-rules.json", "trigger patterns", "hooks", "UserPromptSubmit", "PreToolUse", "500-line rule", "progressive disclosure"]
+}

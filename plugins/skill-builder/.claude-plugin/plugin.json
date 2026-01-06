@@ -1,0 +1,9 @@
+{
+  "name": "skill-builder",
+  "version": "1.0.0",
+  "description": "Automatically create new Claude Code skills following the established showcase pattern with proper structure, progressive disclosure, and 500-line rule compliance.",
+  "author": {
+    "name": "Snappy Consulting"
+  },
+  "keywords": ["skill", "create skill", "skill template", "showcase pattern", "500-line rule", "progressive disclosure"]
+}

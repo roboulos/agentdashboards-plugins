@@ -107,6 +107,55 @@
           "agent.*build.*endpoint"
         ]
       }
+    },
+    "skill-builder": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "high",
+      "promptTriggers": {
+        "keywords": [
+          "create skill",
+          "new skill",
+          "build skill",
+          "add skill",
+          "skill template",
+          "showcase pattern",
+          "500-line rule",
+          "progressive disclosure"
+        ],
+        "intentPatterns": [
+          "create.*skill",
+          "build.*skill",
+          "add.*new.*skill",
+          "reorganize.*skill",
+          "follow.*showcase"
+        ]
+      }
+    },
+    "skill-developer": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "high",
+      "promptTriggers": {
+        "keywords": [
+          "skill-rules.json",
+          "skill rules",
+          "trigger patterns",
+          "hook mechanisms",
+          "UserPromptSubmit",
+          "PreToolUse",
+          "enforcement level",
+          "skill activation",
+          "YAML frontmatter"
+        ],
+        "intentPatterns": [
+          "how.*skill.*trigger",
+          "debug.*skill.*activation",
+          "skill.*not.*activating",
+          "add.*skill.*rules",
+          "hook.*mechanism"
+        ]
+      }
     }
   }
 }

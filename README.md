@@ -33,6 +33,10 @@ Then install plugins:
 
 # Autonomous Xano builder agent
 /plugin install xano-builder-agent@agentdashboards-tools
+
+# Skill creation tools (makes marketplace self-expanding!)
+/plugin install skill-builder@agentdashboards-tools
+/plugin install skill-developer@agentdashboards-tools
 ```
 
 ## Available Plugins
@@ -68,6 +72,13 @@ Then install plugins:
 | Plugin | Type | Description |
 |--------|------|-------------|
 | **xano-builder-agent** | Agent | Autonomous Xano backend developer |
+
+### Skill Creation (Self-Expanding!)
+
+| Plugin | Type | Description |
+|--------|------|-------------|
+| **skill-builder** | Skill | Create new skills following showcase pattern, 500-line rule, progressive disclosure |
+| **skill-developer** | Skill | Technical reference: trigger types, hooks, skill-rules.json, troubleshooting |
 
 ## How the Hooks Work
 
@@ -124,6 +135,8 @@ These plugins are designed for the AgentDashboards stack:
 | typescript-build-checker | 2 | PostToolUse + Stop hooks for TSC validation |
 | skill-activation-hook | 1 | UserPromptSubmit hook for skill suggestions |
 | xano-builder-agent | 1 | Autonomous backend builder |
+| skill-builder | 2 | Skill creation guide + examples |
+| skill-developer | 7 | Complete skill system reference (SKILL.md + 6 resource files) |
 
 ## License
 

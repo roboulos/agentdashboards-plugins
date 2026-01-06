@@ -94,6 +94,30 @@
       "category": "hooks",
       "tags": ["skills", "activation", "hooks", "suggestions", "workflow"],
       "strict": false
+    },
+    {
+      "name": "skill-builder",
+      "source": "skill-builder",
+      "description": "Create new Claude Code skills following showcase patterns. Proper structure, progressive disclosure, 500-line rule compliance. Makes the marketplace self-expanding.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Snappy Consulting"
+      },
+      "category": "skills",
+      "tags": ["skill", "create", "template", "showcase", "500-line", "progressive-disclosure"],
+      "strict": false
+    },
+    {
+      "name": "skill-developer",
+      "source": "skill-developer",
+      "description": "Technical reference for Claude Code skill system. YAML frontmatter, trigger types, enforcement levels, hook mechanisms, skill-rules.json schema, troubleshooting.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Snappy Consulting"
+      },
+      "category": "skills",
+      "tags": ["skill", "developer", "hooks", "triggers", "rules", "reference"],
+      "strict": false
     }
   ]
 }
