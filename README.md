@@ -25,6 +25,12 @@ Then install plugins:
 # Pre-configured MCP servers (Playwright + Xano)
 /plugin install recommended-mcp-servers@agentdashboards-tools
 
+# Auto TypeScript build checking (RECOMMENDED)
+/plugin install typescript-build-checker@agentdashboards-tools
+
+# Smart skill suggestions
+/plugin install skill-activation-hook@agentdashboards-tools
+
 # Autonomous Xano builder agent
 /plugin install xano-builder-agent@agentdashboards-tools
 ```
@@ -33,28 +39,70 @@ Then install plugins:
 
 ### Core Development
 
-| Plugin | Description |
-|--------|-------------|
-| **xano-sdk-builder** | Complete Xano toolkit: XanoScript SDK, curl testing, batch migrations, MCP workflow. BUILD→TEST→UPDATE→REPEAT for 95%+ success. |
-| **frontend-dev-guidelines** | React/TypeScript best practices, ShadCN UI, TanStack Router, Suspense patterns |
+| Plugin | Type | Description |
+|--------|------|-------------|
+| **xano-sdk-builder** | Skill | Complete Xano toolkit: XanoScript SDK, curl testing, batch migrations. BUILD→TEST→UPDATE→REPEAT for 95%+ success. |
+| **frontend-dev-guidelines** | Skill | React/TypeScript best practices, ShadCN UI, TanStack Router, Suspense patterns |
 
 ### Testing
 
-| Plugin | Description |
-|--------|-------------|
-| **playwright-testing** | Browser automation and E2E testing with Playwright MCP |
+| Plugin | Type | Description |
+|--------|------|-------------|
+| **playwright-testing** | Skill | Browser automation and E2E testing with Playwright MCP |
 
 ### MCP Servers
 
-| Plugin | Description |
-|--------|-------------|
-| **recommended-mcp-servers** | Pre-configured MCP servers: Playwright for browser testing, Xano for backend ops |
+| Plugin | Type | Description |
+|--------|------|-------------|
+| **recommended-mcp-servers** | MCP | Pre-configured: Playwright for browser testing, Xano for backend ops |
+
+### Hooks (Automation)
+
+| Plugin | Type | Description |
+|--------|------|-------------|
+| **typescript-build-checker** | Hook | Auto-runs `tsc --noEmit` after edits, catches TypeScript errors early |
+| **skill-activation-hook** | Hook | Smart skill suggestions based on prompt keywords |
 
 ### Agents
 
-| Plugin | Description |
-|--------|-------------|
-| **xano-builder-agent** | Autonomous Xano backend developer agent |
+| Plugin | Type | Description |
+|--------|------|-------------|
+| **xano-builder-agent** | Agent | Autonomous Xano backend developer |
+
+## How the Hooks Work
+
+### typescript-build-checker
+
+1. **PostToolUse**: Tracks every file you edit (Edit, MultiEdit, Write)
+2. **Stop**: When Claude finishes responding, runs `tsc --noEmit` on affected repos
+3. **Feedback**: Shows TypeScript errors with file:line references
+
+```
+## TypeScript Build Errors Detected
+
+Found 3 TypeScript error(s):
+- app: 3 errors
+
+Error details:
+  app/components/Dashboard.tsx:42:5 - error TS2322: Type 'string' is not assignable to type 'number'.
+```
+
+### skill-activation-hook
+
+1. **UserPromptSubmit**: Scans your prompt for keywords
+2. **Suggestions**: Recommends relevant skills before Claude responds
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🎯 SKILL ACTIVATION CHECK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📚 RECOMMENDED SKILLS:
+  → xano-sdk-builder (CRITICAL)
+
+ACTION: Use Skill tool BEFORE responding
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
 
 ## Tech Stack
 
@@ -69,10 +117,12 @@ These plugins are designed for the AgentDashboards stack:
 
 | Plugin | Files | Content |
 |--------|-------|---------|
-| xano-sdk-builder | 25+ | XanoScript methods, filters, operators, curl patterns, batch migrations |
+| xano-sdk-builder | 25+ | XanoScript methods, filters, operators, curl patterns, batch migrations, skill-rules.json |
 | frontend-dev-guidelines | 10 | Component patterns, data fetching, styling, routing |
 | playwright-testing | 4 | Browser automation, debugging, test strategies |
 | recommended-mcp-servers | 1 | Playwright + Xano MCP configs |
+| typescript-build-checker | 2 | PostToolUse + Stop hooks for TSC validation |
+| skill-activation-hook | 1 | UserPromptSubmit hook for skill suggestions |
 | xano-builder-agent | 1 | Autonomous backend builder |
 
 ## License

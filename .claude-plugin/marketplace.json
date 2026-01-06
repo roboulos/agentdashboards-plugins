@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Official Claude Code plugins for AgentDashboards development. Battle-tested patterns for Xano backend + Next.js frontend stack.",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "pluginRoot": "./plugins"
   },
   "plugins": [
@@ -69,6 +69,30 @@
       "category": "mcp",
       "tags": ["mcp", "playwright", "xano", "servers", "tools"],
       "mcpServers": true,
+      "strict": false
+    },
+    {
+      "name": "typescript-build-checker",
+      "source": "typescript-build-checker",
+      "description": "Automatic TypeScript build checking after file edits. Runs tsc --noEmit when Claude stops, catches errors early, shows exact error locations.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Snappy Consulting"
+      },
+      "category": "hooks",
+      "tags": ["typescript", "tsc", "build", "errors", "hooks", "validation"],
+      "strict": false
+    },
+    {
+      "name": "skill-activation-hook",
+      "source": "skill-activation-hook",
+      "description": "Smart skill suggestions based on your prompt. Detects keywords like 'xano', 'component', 'playwright' and recommends the right skill before Claude responds.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Snappy Consulting"
+      },
+      "category": "hooks",
+      "tags": ["skills", "activation", "hooks", "suggestions", "workflow"],
       "strict": false
     }
   ]

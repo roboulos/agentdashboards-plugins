@@ -1,0 +1,32 @@
+{
+  "name": "typescript-build-checker",
+  "version": "1.0.0",
+  "description": "Automatic TypeScript build checking after file edits. Catches errors early by running tsc --noEmit when Claude stops responding.",
+  "author": {
+    "name": "Snappy Consulting"
+  },
+  "keywords": ["typescript", "tsc", "build", "errors", "hooks", "validation"],
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|MultiEdit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/post-tool-use-tracker.sh"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/stop-build-check.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

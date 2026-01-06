@@ -1,0 +1,21 @@
+{
+  "name": "skill-activation-hook",
+  "version": "1.0.0",
+  "description": "Automatically suggests relevant skills based on your prompt. Scans for keywords like 'xano', 'component', 'playwright' and recommends the right skill to use.",
+  "author": {
+    "name": "Snappy Consulting"
+  },
+  "keywords": ["skills", "activation", "hooks", "suggestions", "workflow"],
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/skill-activation.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

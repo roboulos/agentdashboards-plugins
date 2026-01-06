@@ -1,0 +1,112 @@
+{
+  "version": "1.0.0",
+  "description": "Skill activation rules for AgentDashboards development",
+  "skills": {
+    "xano-sdk-builder": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "critical",
+      "promptTriggers": {
+        "keywords": [
+          "xano",
+          "xanoscript",
+          "endpoint",
+          "api endpoint",
+          "create endpoint",
+          "update endpoint",
+          "sdk_builder",
+          "xano mcp",
+          "xano-mcp",
+          "db.query",
+          "db.add",
+          "db.edit",
+          "api.request",
+          "function.run",
+          "background task",
+          "curl test",
+          "batch migration"
+        ],
+        "intentPatterns": [
+          "build.*xano",
+          "create.*xano.*endpoint",
+          "update.*xano.*endpoint",
+          "xano.*function",
+          "test.*endpoint",
+          "curl.*xano",
+          "migrate.*xano",
+          "xanoscript.*syntax"
+        ]
+      }
+    },
+    "frontend-dev-guidelines": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "high",
+      "promptTriggers": {
+        "keywords": [
+          "react component",
+          "typescript",
+          "shadcn",
+          "tailwind",
+          "tanstack",
+          "suspense",
+          "useSWR",
+          "use-transactions",
+          "use-roster",
+          "use-listings",
+          "dashboard layout",
+          "next.js",
+          "nextjs"
+        ],
+        "intentPatterns": [
+          "create.*component",
+          "add.*component",
+          "build.*frontend",
+          "fix.*typescript",
+          "style.*component",
+          "react.*hook"
+        ]
+      }
+    },
+    "playwright-testing": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "high",
+      "promptTriggers": {
+        "keywords": [
+          "playwright",
+          "e2e test",
+          "browser test",
+          "visual test",
+          "screenshot",
+          "browser automation",
+          "fill form",
+          "click button",
+          "navigate to"
+        ],
+        "intentPatterns": [
+          "test.*browser",
+          "automate.*browser",
+          "e2e.*test",
+          "playwright.*mcp"
+        ]
+      }
+    },
+    "xano-builder-agent": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "medium",
+      "promptTriggers": {
+        "keywords": [
+          "build xano endpoint autonomously",
+          "xano builder agent",
+          "autonomous xano"
+        ],
+        "intentPatterns": [
+          "autonomously.*build.*xano",
+          "agent.*build.*endpoint"
+        ]
+      }
+    }
+  }
+}
