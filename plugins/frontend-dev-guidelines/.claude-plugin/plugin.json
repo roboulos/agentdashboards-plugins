@@ -1,0 +1,10 @@
+{
+  "name": "frontend-dev-guidelines",
+  "version": "1.0.0",
+  "description": "React/TypeScript best practices for AgentDashboards. ShadCN UI, TanStack, Suspense patterns.",
+  "author": {
+    "name": "Snappy Consulting"
+  },
+  "skills": ["./skills/"],
+  "keywords": ["react", "typescript", "shadcn", "tailwind", "frontend", "nextjs"]
+}

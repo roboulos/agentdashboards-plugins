@@ -1,0 +1,10 @@
+{
+  "name": "xano-api-development",
+  "version": "1.0.0",
+  "description": "High-level Xano architecture and design decisions. Workspace organization, auth patterns.",
+  "author": {
+    "name": "Snappy Consulting"
+  },
+  "skills": ["./skills/"],
+  "keywords": ["xano", "architecture", "design", "best-practices", "workspace"]
+}

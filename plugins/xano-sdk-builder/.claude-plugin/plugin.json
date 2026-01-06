@@ -1,0 +1,10 @@
+{
+  "name": "xano-sdk-builder",
+  "version": "1.0.0",
+  "description": "Expert XanoScript SDK development with BUILD->TEST->UPDATE->REPEAT workflow. 95%+ first-submission success patterns.",
+  "author": {
+    "name": "Snappy Consulting"
+  },
+  "skills": ["./skills/"],
+  "keywords": ["xano", "xanoscript", "backend", "api", "sdk", "endpoint", "function", "task"]
+}

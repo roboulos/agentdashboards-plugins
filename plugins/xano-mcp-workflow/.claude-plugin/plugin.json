@@ -1,0 +1,10 @@
+{
+  "name": "xano-mcp-workflow",
+  "version": "1.0.0",
+  "description": "Battle-tested patterns for the Xano MCP tool. Curl testing, endpoint creation, batch migrations.",
+  "author": {
+    "name": "Snappy Consulting"
+  },
+  "skills": ["./skills/"],
+  "keywords": ["xano", "mcp", "curl", "testing", "migrations", "batch"]
+}

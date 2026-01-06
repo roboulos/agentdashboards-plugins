@@ -1,0 +1,110 @@
+{
+  "name": "agentdashboards-tools",
+  "owner": {
+    "name": "Snappy Consulting",
+    "email": "support@snappyconsulting.com"
+  },
+  "metadata": {
+    "description": "Official Claude Code plugins for AgentDashboards development. Battle-tested patterns for Xano backend + Next.js frontend stack.",
+    "version": "1.0.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "xano-sdk-builder",
+      "source": "xano-sdk-builder",
+      "description": "Expert XanoScript SDK development with BUILD->TEST->UPDATE->REPEAT workflow. 95%+ first-submission success patterns for endpoints, functions, and tasks.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Snappy Consulting"
+      },
+      "category": "backend",
+      "tags": ["xano", "xanoscript", "backend", "api", "sdk"],
+      "strict": false
+    },
+    {
+      "name": "xano-mcp-workflow",
+      "source": "xano-mcp-workflow",
+      "description": "Battle-tested patterns for the Xano MCP tool. Curl testing, endpoint creation, batch migrations, error handling.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Snappy Consulting"
+      },
+      "category": "backend",
+      "tags": ["xano", "mcp", "curl", "testing", "migrations"],
+      "strict": false
+    },
+    {
+      "name": "xano-api-development",
+      "source": "xano-api-development",
+      "description": "High-level Xano architecture and design decisions. Workspace organization, endpoint vs function choices, auth patterns.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Snappy Consulting"
+      },
+      "category": "backend",
+      "tags": ["xano", "architecture", "design", "best-practices"],
+      "strict": false
+    },
+    {
+      "name": "frontend-dev-guidelines",
+      "source": "frontend-dev-guidelines",
+      "description": "React/TypeScript best practices for AgentDashboards. ShadCN UI, TanStack Router, Suspense patterns, MUI v7 compatibility.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Snappy Consulting"
+      },
+      "category": "frontend",
+      "tags": ["react", "typescript", "shadcn", "tailwind", "frontend"],
+      "strict": false
+    },
+    {
+      "name": "xano-nextjs-integration",
+      "source": "xano-nextjs-integration",
+      "description": "Connect Xano backend to Next.js frontend. Service layer patterns, data flow, state management, type safety across boundaries.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Snappy Consulting"
+      },
+      "category": "fullstack",
+      "tags": ["xano", "nextjs", "integration", "api-client", "hooks"],
+      "strict": false
+    },
+    {
+      "name": "debug-fix-verify",
+      "source": "debug-fix-verify",
+      "description": "Systematic 7-step debug workflow. Add logs, test, analyze, fix, verify, deploy. Works for both Xano and frontend issues.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Snappy Consulting"
+      },
+      "category": "debugging",
+      "tags": ["debug", "logging", "testing", "verification"],
+      "strict": false
+    },
+    {
+      "name": "playwright-testing",
+      "source": "playwright-testing",
+      "description": "Browser automation and E2E testing with Playwright MCP. Snapshots, form filling, visual testing, console error debugging.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Snappy Consulting"
+      },
+      "category": "testing",
+      "tags": ["playwright", "e2e", "testing", "browser", "automation"],
+      "strict": false
+    },
+    {
+      "name": "xano-builder-agent",
+      "source": "xano-builder-agent",
+      "description": "Autonomous Xano backend developer agent. Builds endpoints incrementally following proven patterns.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Snappy Consulting"
+      },
+      "category": "agents",
+      "tags": ["xano", "agent", "autonomous", "backend"],
+      "strict": false
+    }
+  ]
+}

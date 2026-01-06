@@ -1,0 +1,10 @@
+{
+  "name": "xano-builder-agent",
+  "version": "1.0.0",
+  "description": "Autonomous Xano backend developer agent. Builds endpoints incrementally following proven patterns.",
+  "author": {
+    "name": "Snappy Consulting"
+  },
+  "agents": ["./agents/"],
+  "keywords": ["xano", "agent", "autonomous", "backend", "builder"]
+}
