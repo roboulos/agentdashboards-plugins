@@ -6,13 +6,13 @@
   },
   "metadata": {
     "description": "Official Claude Code plugins for AgentDashboards development. Battle-tested patterns for Xano backend + Next.js frontend stack.",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "pluginRoot": "./plugins"
   },
   "plugins": [
     {
       "name": "xano-sdk-builder",
-      "source": "xano-sdk-builder",
+      "source": "./xano-sdk-builder",
       "description": "Complete Xano development toolkit. XanoScript SDK, curl testing, batch migrations, MCP workflow patterns. BUILD->TEST->UPDATE->REPEAT for 95%+ success.",
       "version": "1.1.0",
       "author": {
@@ -24,7 +24,7 @@
     },
     {
       "name": "frontend-dev-guidelines",
-      "source": "frontend-dev-guidelines",
+      "source": "./frontend-dev-guidelines",
       "description": "React/TypeScript best practices for AgentDashboards. ShadCN UI, TanStack Router, Suspense patterns, MUI v7 compatibility.",
       "version": "1.0.0",
       "author": {
@@ -36,7 +36,7 @@
     },
     {
       "name": "playwright-testing",
-      "source": "playwright-testing",
+      "source": "./playwright-testing",
       "description": "Browser automation and E2E testing with Playwright MCP. Snapshots, form filling, visual testing, console error debugging.",
       "version": "1.0.0",
       "author": {
@@ -48,7 +48,7 @@
     },
     {
       "name": "xano-builder-agent",
-      "source": "xano-builder-agent",
+      "source": "./xano-builder-agent",
       "description": "Autonomous Xano backend developer agent. Builds endpoints incrementally following proven patterns.",
       "version": "1.0.0",
       "author": {
@@ -60,7 +60,7 @@
     },
     {
       "name": "recommended-mcp-servers",
-      "source": "recommended-mcp-servers",
+      "source": "./recommended-mcp-servers",
       "description": "Pre-configured MCP servers: Playwright for browser testing, Xano for backend operations. Install once, ready to use.",
       "version": "1.0.0",
       "author": {
@@ -68,12 +68,11 @@
       },
       "category": "mcp",
       "tags": ["mcp", "playwright", "xano", "servers", "tools"],
-      "mcpServers": true,
       "strict": false
     },
     {
       "name": "typescript-build-checker",
-      "source": "typescript-build-checker",
+      "source": "./typescript-build-checker",
       "description": "Automatic TypeScript build checking after file edits. Runs tsc --noEmit when Claude stops, catches errors early, shows exact error locations.",
       "version": "1.0.0",
       "author": {
@@ -85,7 +84,7 @@
     },
     {
       "name": "skill-activation-hook",
-      "source": "skill-activation-hook",
+      "source": "./skill-activation-hook",
       "description": "Smart skill suggestions based on your prompt. Detects keywords like 'xano', 'component', 'playwright' and recommends the right skill before Claude responds.",
       "version": "1.0.0",
       "author": {
@@ -97,7 +96,7 @@
     },
     {
       "name": "skill-builder",
-      "source": "skill-builder",
+      "source": "./skill-builder",
       "description": "Create new Claude Code skills following showcase patterns. Proper structure, progressive disclosure, 500-line rule compliance. Makes the marketplace self-expanding.",
       "version": "1.0.0",
       "author": {
@@ -109,7 +108,7 @@
     },
     {
       "name": "skill-developer",
-      "source": "skill-developer",
+      "source": "./skill-developer",
       "description": "Technical reference for Claude Code skill system. YAML frontmatter, trigger types, enforcement levels, hook mechanisms, skill-rules.json schema, troubleshooting.",
       "version": "1.0.0",
       "author": {
