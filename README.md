@@ -7,39 +7,48 @@ Official Claude Code plugin marketplace for AgentDashboards development.
 Add this marketplace to Claude Code:
 
 ```bash
-/plugin marketplace add sboulos/agentdashboards-plugins
+/plugin marketplace add roboulos/agentdashboards-plugins
 ```
 
 Then install plugins:
 
 ```bash
+# Essential - Complete Xano development toolkit
 /plugin install xano-sdk-builder@agentdashboards-tools
+
+# Frontend React/TypeScript patterns
 /plugin install frontend-dev-guidelines@agentdashboards-tools
+
+# Browser testing with Playwright
+/plugin install playwright-testing@agentdashboards-tools
+
+# Pre-configured MCP servers (Playwright + Xano)
+/plugin install recommended-mcp-servers@agentdashboards-tools
+
+# Autonomous Xano builder agent
+/plugin install xano-builder-agent@agentdashboards-tools
 ```
 
 ## Available Plugins
 
-### Core Xano Development
+### Core Development
 
 | Plugin | Description |
 |--------|-------------|
-| **xano-sdk-builder** | Expert XanoScript SDK development with BUILD→TEST→UPDATE→REPEAT workflow |
-| **xano-mcp-workflow** | Battle-tested patterns for the Xano MCP tool |
-| **xano-api-development** | High-level Xano architecture and design decisions |
+| **xano-sdk-builder** | Complete Xano toolkit: XanoScript SDK, curl testing, batch migrations, MCP workflow. BUILD→TEST→UPDATE→REPEAT for 95%+ success. |
+| **frontend-dev-guidelines** | React/TypeScript best practices, ShadCN UI, TanStack Router, Suspense patterns |
 
-### Frontend Development
-
-| Plugin | Description |
-|--------|-------------|
-| **frontend-dev-guidelines** | React/TypeScript best practices, ShadCN UI, TanStack patterns |
-| **xano-nextjs-integration** | Connect Xano backend to Next.js frontend |
-
-### Testing & Debugging
+### Testing
 
 | Plugin | Description |
 |--------|-------------|
-| **debug-fix-verify** | Systematic 7-step debug workflow |
-| **playwright-testing** | Browser automation and E2E testing |
+| **playwright-testing** | Browser automation and E2E testing with Playwright MCP |
+
+### MCP Servers
+
+| Plugin | Description |
+|--------|-------------|
+| **recommended-mcp-servers** | Pre-configured MCP servers: Playwright for browser testing, Xano for backend ops |
 
 ### Agents
 
@@ -55,6 +64,16 @@ These plugins are designed for the AgentDashboards stack:
 - **Backend:** Xano (XanoScript)
 - **Data Fetching:** SWR hooks
 - **Testing:** Playwright, curl
+
+## What's Included
+
+| Plugin | Files | Content |
+|--------|-------|---------|
+| xano-sdk-builder | 25+ | XanoScript methods, filters, operators, curl patterns, batch migrations |
+| frontend-dev-guidelines | 10 | Component patterns, data fetching, styling, routing |
+| playwright-testing | 4 | Browser automation, debugging, test strategies |
+| recommended-mcp-servers | 1 | Playwright + Xano MCP configs |
+| xano-builder-agent | 1 | Autonomous backend builder |
 
 ## License
 

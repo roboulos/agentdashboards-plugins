@@ -1,0 +1,21 @@
+{
+  "name": "recommended-mcp-servers",
+  "version": "1.0.0",
+  "description": "Pre-configured MCP servers for AgentDashboards development. Includes Playwright for browser testing and Xano for backend operations.",
+  "author": {
+    "name": "Snappy Consulting"
+  },
+  "keywords": ["mcp", "playwright", "xano", "browser", "automation", "testing"],
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@anthropic/mcp-server-playwright"],
+      "env": {}
+    },
+    "xano": {
+      "command": "npx",
+      "args": ["-y", "xano-mcp"],
+      "env": {}
+    }
+  }
+}
